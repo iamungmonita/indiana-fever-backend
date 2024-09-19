@@ -11,5 +11,4 @@ router.get('/auth/check_cookie', auth.cookie)
 //membership
 
 
-
-module.exports = router
+module.exports = router;

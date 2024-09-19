@@ -4,6 +4,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 
 const auth_route = require('./routes/auth_route')
+const messageRoute = require('./routes/message_route')
 
 require('dotenv').config();
 
@@ -18,6 +19,7 @@ app.use(cors({
     credentials: true
 }));
 app.use(auth_route)
+app.use(messageRoute)
 
 mongoose.connect('mongodb://localhost:27017/indiana-fever')
 
